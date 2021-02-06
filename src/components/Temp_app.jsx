@@ -21,7 +21,7 @@ const Temp_app = ()=>{
 
     async function get_data(){ 
             
-        const res = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${key}`).then((response)=>{console.log(response);set_api_res(response.data)}).catch((response)=>{set_api_res(null)});
+        const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${key}`).then((response)=>{console.log(response);set_api_res(response.data)}).catch((response)=>{set_api_res(null)});
         // set_api_res(()=>{
         //     return(res.data)
         // })
