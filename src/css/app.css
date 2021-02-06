@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    background-repeat: no-repeat;
+ 
+    
+
+    
+}
+
+.object {
+    animation: MoveUpDown 1s linear infinite;
+    position: absolute;
+    
+  }
+  
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 15px;
+    }
+  }
