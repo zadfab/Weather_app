@@ -31,11 +31,8 @@ const Temp_app = ()=>{
    
 
     useEffect(()=>{
-        console.log("__________------------------")
+       
         get_data();
-       
-        console.log(location)
-       
            
     },[location,unit])
 
@@ -46,7 +43,7 @@ const Temp_app = ()=>{
     const change_img = ()=>{
        
         try {
-            console.log("This is the culprit*******888",api_res.weather[0].main)
+            console.log(api_res.weather[0].main)
         } catch (error) {
             return(null)
         }
@@ -57,13 +54,12 @@ const Temp_app = ()=>{
     const change_happen = (e)=>{
         setLocation(e.target.value)
         change_img()
-        console.log("__________!!!!!!!!!!!!!!!!!!!!",api_res)
+       
     }
 
     return (
         <>
-        {console.log("__________~~~~~~~~",api_res)}
-       
+        
        <img src={bg_img} style={{position:'absolute',zIndex:'-1',width:'100%',height:'100vh'}} alt="bg-img"/>
         <header>
         <section  >
