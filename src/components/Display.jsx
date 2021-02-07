@@ -67,7 +67,7 @@ const Display = (props) => {
                     <div className="col-2"></div>
                    
                    
-                    {!props.main_data?<h1 className="text-center ml-5">No data found</h1>:
+                    {!props.main_data?<h1 style={{marginLeft:'22% ',marginTop:'10%'}} className="text-center ">No data found</h1>:
                     <div className="col-8 border text-center img-fluid " style={{backgroundImage:`url(${bg_name})` ,backgroundSize:`100% 100%`,borderRadius:`15px`}}>
                         <h1 className='mt-5 text-capitalize'>{props.main_data.name},{props.main_data.sys.country}</h1>
                         <h1 >{props.main_data.main.temp}<sup>o</sup>{props.units.convention[0]}</h1>
