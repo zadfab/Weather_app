@@ -1,0 +1,2 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Jost",sans-serif;background-repeat:no-repeat}.object{animation:MoveUpDown 1s linear infinite;position:absolute}@keyframes MoveUpDown{0%,to{bottom:0}50%{bottom:15px}}.mymodal{position:fixed;top:35%;left:50%;transform:translate(-50%,-50%);width:30%;border:1px solid #ccc;background:#fff;overflow:auto;border-radius:4px;outline:none;padding:20px}.myoverlay{position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.75)}
+/*# sourceMappingURL=main.97b848f2.chunk.css.map */
