@@ -10,8 +10,7 @@ import DragIndicatorIcon from '@material-ui/icons/DragIndicator';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import SwapVertIcon from '@material-ui/icons/SwapVert';
 import SwapHorizIcon from '@material-ui/icons/SwapHoriz';
-import FlagIcon from '@material-ui/icons/Flag';
-import GrainIcon from '@material-ui/icons/Grain';
+
 import default_img from '../images/default.gif'
 import CloudIcon from '@material-ui/icons/Cloud';
 import NearMeIcon from '@material-ui/icons/NearMe';
@@ -68,18 +67,18 @@ const Display = (props) => {
                     <div className="col-2"></div>
                    
                    
-                    {!props.main_data?<h1 className="text-center">No data found</h1>:
+                    {!props.main_data?<h1 className="text-center ml-5">No data found</h1>:
                     <div className="col-8 border text-center img-fluid " style={{backgroundImage:`url(${bg_name})` ,backgroundSize:`100% 100%`,borderRadius:`15px`}}>
                         <h1 className='mt-5 text-capitalize'>{props.main_data.name},{props.main_data.sys.country}</h1>
-                        <h1 >{props.main_data.main.temp}<sup>o</sup>C</h1>
-                        <p>Feels like {props.main_data.main.feels_like}<sup>o</sup>C</p>
+                        <h1 >{props.main_data.main.temp}<sup>o</sup>{props.units.convention[0]}</h1>
+                        <p>Feels like {props.main_data.main.feels_like}<sup>o</sup>{props.units.convention[0]}</p>
                         <h2>{weather_icon} {props.main_data.weather[0].main} </h2>
                         <div className='mb-5'>
-                            <span className="mx-2 ">Min Temp:{props.main_data.main.temp_min}<sup>o</sup>C</span><span className="mx-2">Max Temp:{props.main_data.main.temp_max}<sup>o</sup>C</span>   </div> 
+                            <span className="mx-2 ">Min Temp:{props.main_data.main.temp_min}<sup>o</sup>{props.units.convention[0]}</span><span className="mx-2">Max Temp:{props.main_data.main.temp_max}<sup>o</sup>{props.units.convention[0]}</span>   </div> 
                         <div  className='mb-5'>
                             <span className="mx-2 "><i><DragIndicatorIcon/></i>Pressure:{props.main_data.main.pressure} hPa</span><span className="mx-2"><i><OpacityIcon/></i>Humidity:{props.main_data.main.humidity}%</span>    </div>                       
                         <div className='mb-5'> 
-                            <span className="mx-2 "><i><VisibilityIcon/></i>Visibility:{props.main_data.visibility/1000} Km</span><span className="mx-2"><i><NearMeIcon/></i>wind:{props.main_data.wind.speed} m/s</span> 
+                            <span className="mx-2 "><i><VisibilityIcon/></i>Visibility:{props.main_data.visibility/1000} Km</span><span className="mx-2"><i><NearMeIcon/></i>wind:{props.main_data.wind.speed} { props.units.convention[1]}</span> 
                         </div>
                         <div className='mb-5'> 
                             <span className="mx-2 "><i><SwapVertIcon/></i>longitude:{props.main_data.coord.lon} </span><span className="mx-2"><i><SwapHorizIcon/></i>latitude:{props.main_data.coord.lat}</span> 
